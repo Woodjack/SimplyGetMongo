@@ -32,18 +32,37 @@ class Application(tornado.web.Application):
 
 
 class RequestHandler(tornado.web.RequestHandler):
-    def get(self, word):
+    def get(self, urlInput):
+
         #This is the collection.  In this example it's using the geojson collection in the blinkAPI database
         #The self.apllication simply refers to the class variable db above
         coll = self.application.db.geojson
-        #creates a mongo cursor to the query results
-        #it's necessary NOT to have the '_id' field in the results.  For some reason it crashes if you do include it (beyond my knowledge set)
-        mongoResults = coll.find( {}, {"_id":0} )
+
+        #change the urlInput from unicode to a python string
+        urlInput = str(urlInput)
+
+        #creates a mongo query 'dictionary'
+        query = {}
+
+        #if the request is noQuery, then simply query the whole db collection
+        if urlInput == "noQuery":
+            query = {}
+
+
+        #here is where you could have other 'elif' statements to handle specific db queries
+
+
+        mongoResults = coll.find( query, {"_id":0} )
+
+        #check to see if there is anything returned
         if mongoResults:
+
             #this creates the json-array to be uploaded
             jsonArray = (dumps(mongoResults))
+
             #this is the line that 'prints' the json-array to the http request response
             self.write(str(jsonArray))
+
         else:
             self.set_status(404)
             self.write({"error": "word not found"})
