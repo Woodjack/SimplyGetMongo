@@ -11,6 +11,11 @@ If you don't put the 'anything', the error handler kicks in, so be sure to inclu
 
 Please contribute to this repository.
 
+
+## Technical stuff
+1) you need to have the tornado python module.
+			To download:     pip install tornado
+
 Here is an example of a json-array that is returned by the http request:
 
 [
