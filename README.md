@@ -17,12 +17,19 @@ Please contribute to this repository.
 ## How to get up and running
 1) you need to have the tornado python module.
 			To download:     pip install tornado
+			
 2) open 'SimplyGetMongo-server.py'
+
 3) change the pymongo.Connection parameters if you're not using a local mongo instance
+
 4) update the database name to your desired database name on code-line 27 and database collection name on line 47
+
 5) update the query handler if you want anything fancy
+
 6) save the file
+
 7) load a terminal, go to the file directory and type:  python SimplyGetMongo-server.py
+
 8) go to a web browser and type in:  localhost:8000/noQuery
 
 
