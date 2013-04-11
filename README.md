@@ -1,7 +1,7 @@
 SimplyGetMongo
 ==============
 
-A simple Tornado webServer (python) which handles GET requests to a local mongoDB. The server returns puts the data into a javascript friendly json array.
+A simple Tornado webServer (python) which handles GET requests, returning results from a mongoDB. The server returns the data as javascript friendly json-array (see example below).
 
 The base service is modeled from "Introduction to Tornado" O'Reilly book.  (http://my.safaribooksonline.com/9781449312787/id2923693#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE0NDkzMTI3ODclMkZpZDI5MjM2OTMmcXVlcnk9)
 
@@ -19,7 +19,7 @@ Please contribute to this repository.
 			To download:     pip install tornado
 2) open 'SimplyGetMongo-server.py'
 3) change the pymongo.Connection parameters if you're not using a local mongo instance
-4) update the database name to your desired database name on code-line 27
+4) update the database name to your desired database name on code-line 27 and database collection name on line 47
 5) update the query handler if you want anything fancy
 6) save the file
 7) load a terminal, go to the file directory and type:  python SimplyGetMongo-server.py
