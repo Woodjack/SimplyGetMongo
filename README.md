@@ -13,7 +13,7 @@ There is a comment in the code where you can insert some if statements to handle
 Please contribute to this repository.
 
 
-#####################################################
+----------------------------------------------------------------------------------------------------
 ## How to get up and running
 1) you need to have the tornado python module.
 			To download:     pip install tornado
@@ -36,7 +36,8 @@ Please contribute to this repository.
 
 
 
-
+APPENDIX
+----------------------------------------------------------------------------------------------------
 
 
 
